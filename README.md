@@ -1,4 +1,4 @@
-# Letter Lab 🧰
+# # Letter Lab 🧰
 
 Free online text transformation and analysis tools built for speed, privacy, and simplicity. All manipulations run locally in the browser — no data is sent to external servers.
 
@@ -75,27 +75,23 @@ Free online text transformation and analysis tools built for speed, privacy, and
 1. **Clone the repository:**
   Bash
   ```
-  git clone [https://github.com/your-username/radiant-ring.git](https://github.com/your-username/radiant-ring.git)
-  cd radiant-ring
-
+  git clone [https://github.com/Sidspirit/letterlab.git](https://github.com/Sidspirit/letterlab.git)
+  cd letterlab
   ```
 2. **Install dependencies:**
   Bash
   ```
   npm install
-
   ```
 3. **Start the development server:**
   Bash
   ```
   npm run dev
-
   ```
 4. **Build for production:**
   Bash
   ```
   npm run build
-
   ```
 
 ---
