@@ -1,0 +1,105 @@
+---
+import '../styles/style.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = 'Letter Lab - Online Text Tools', 
+  description = 'Free online text transformation tools.' 
+} = Astro.props;
+
+const currentYear = new Date().getFullYear();
+const pathname = Astro.url.pathname;
+const isHome = pathname === '/' || pathname === '';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBTNGL9D');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <!-- Yandex Verification -->
+  <meta name="yandex-verification" content="dbfe0b465e0f0b25" />
+  
+  <script is:inline src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+  <link rel="stylesheet" as="style" onload="this.rel='stylesheet'"
+    href="https://fonts.googleapis.com/css2?display=swap&family=Noto+Sans:wght@400;500;700;900&family=Work+Sans:wght@400;500;700;900" />
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBTNGL9D"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="relative flex size-full min-h-screen flex-col bg-white overflow-x-hidden" style='font-family: "Work Sans", "Noto Sans", sans-serif;'>
+    <div class="layout-container flex h-full grow flex-col">
+      
+      <!-- HEADER -->
+<!-- HEADER -->
+<header class="flex items-center justify-between border-b border-[#f0f2f4] px-4 md:px-20 py-4 bg-white">
+  <div>
+    {isHome ? (
+      <div class="flex items-center gap-3 cursor-default">
+        <img src="/favicon.svg" alt="Letter Lab Logo" class="w-6 h-6" />
+        <span class="text-[#111418] text-lg font-bold tracking-tight">
+          Letter Lab
+        </span>
+      </div>
+    ) : (
+      <a href="/" class="flex items-center gap-3 text-[#111418] hover:text-[#3289e7] transition-colors">
+        <img src="/favicon.svg" alt="Letter Lab Logo" class="w-6 h-6" />
+        <span class="text-lg font-bold tracking-tight">
+          Letter Lab
+        </span>
+      </a>
+    )}
+  </div>
+
+  <nav class="flex items-center gap-6 text-sm font-semibold">
+    <a href="/about" class="text-[#111418] hover:text-[#3289e7] transition-colors">About</a>
+    <a href="/privacy" class="text-[#111418] hover:text-[#3289e7] transition-colors">Privacy</a>
+    <a href="/terms" class="text-[#111418] hover:text-[#3289e7] transition-colors">Terms</a>
+  </nav>
+</header>
+
+      <!-- КОНТЕНТ СТРАНИЦЫ -->
+      <slot />
+
+      <!-- FOOTER -->
+      <footer class="flex justify-center border-t border-solid border-t-[#f0f2f4]">
+        <div class="flex max-w-[960px] flex-1 flex-col">
+          <div class="flex flex-col gap-6 px-5 py-10 text-center @container">
+            <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+              <a class="text-[#637588] text-base font-normal leading-normal min-w-40" href="/privacy">Privacy Policy</a>
+              <a class="text-[#637588] text-base font-normal leading-normal min-w-40" href="/terms">Terms of Service</a>
+              <a class="text-[#637588] text-base font-normal leading-normal min-w-40" href="/about">About the Creator</a>
+            </div>
+            <p class="text-[#637588] text-base font-normal leading-normal">© 2025–{currentYear} Letter Lab</p>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+</body>
+</html>

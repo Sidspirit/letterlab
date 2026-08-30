@@ -1,0 +1,162 @@
+[
+    {
+      "slug": "uppercase",
+      "title": "Uppercase Converter",
+      "h1": "Uppercase Converter",
+      "description": "Convert any text into fully capitalized uppercase letters instantly.",
+      "actionType": "uppercase",
+      "introText": "This tool converts your text into all uppercase letters in one click. It's useful for headlines, emphasis, or formatting requirements."
+    },
+    {
+      "slug": "lowercase",
+      "title": "Lowercase Converter",
+      "h1": "Lowercase Converter",
+      "description": "Convert any text into fully lowercase letters instantly.",
+      "actionType": "lowercase",
+      "introText": "This tool converts your text into all lowercase letters in one click. It's handy for normalizing text before processing or comparison."
+    },
+    {
+      "slug": "sentence-case",
+      "title": "Sentence Case Converter",
+      "h1": "Sentence Case Converter",
+      "description": "Convert text into proper sentence case, capitalizing the first letter of each sentence.",
+      "actionType": "sentence-case",
+      "introText": "This tool automatically capitalizes the first letter of every sentence in your text. It helps clean up text pasted from sources with inconsistent capitalization."
+    },
+    {
+      "slug": "title-case",
+      "title": "Title Case Converter",
+      "h1": "Title Case Converter",
+      "description": "Convert text into title case by capitalizing the first letter of each major word.",
+      "actionType": "title-case",
+      "introText": "This tool capitalizes the first letter of each significant word, following standard title casing rules. It's ideal for headlines, titles, and article names."
+    },
+    {
+      "slug": "slugify",
+      "title": "Slug Generator",
+      "h1": "Slugify Text",
+      "description": "Convert text into a clean, URL-friendly slug with hyphens and lowercase letters.",
+      "actionType": "slugify",
+      "introText": "This tool transforms your text into a URL-safe slug by removing special characters and replacing spaces with hyphens. It's perfect for creating SEO-friendly URLs."
+    },
+    {
+      "slug": "camelcase",
+      "title": "camelCase Converter",
+      "h1": "Convert to camelCase",
+      "description": "Convert text into camelCase format commonly used in programming variable names.",
+      "actionType": "camelcase",
+      "introText": "This tool reformats your text into camelCase, joining words and capitalizing each word except the first. It's widely used for naming variables and functions in code."
+    },
+    {
+      "slug": "snakecase",
+      "title": "snake_case Converter",
+      "h1": "Convert to snake_case",
+      "description": "Convert text into snake_case format using underscores between lowercase words.",
+      "actionType": "snakecase",
+      "introText": "This tool converts your text into snake_case by joining words with underscores. It's commonly used for variable names in Python and database column naming."
+    },
+    {
+      "slug": "kebabcase",
+      "title": "kebab-case Converter",
+      "h1": "Convert to kebab-case",
+      "description": "Convert text into kebab-case format using hyphens between lowercase words.",
+      "actionType": "kebabcase",
+      "introText": "This tool converts your text into kebab-case by joining words with hyphens. It's often used in URLs, CSS classes, and file naming conventions."
+    },
+    {
+      "slug": "remove-extra-spaces",
+      "title": "Remove Extra Spaces",
+      "h1": "Remove Extra Spaces",
+      "description": "Remove extra, duplicate, and trailing spaces from your text automatically.",
+      "actionType": "remove-extra-spaces",
+      "introText": "This tool strips out multiple consecutive spaces and trims unnecessary whitespace from your text. It's useful for cleaning up copy-pasted or poorly formatted content."
+    },
+    {
+      "slug": "reverse-text",
+      "title": "Reverse Text Generator",
+      "h1": "Reverse Text",
+      "description": "Reverse the order of characters in your text instantly.",
+      "actionType": "reverse-text",
+      "introText": "This tool flips your entire text backward, reversing the character order. It's fun for creating mirrored text or checking palindromes."
+    },
+    {
+      "slug": "word-counter",
+      "title": "Word Counter",
+      "h1": "Word Counter",
+      "description": "Count words, characters, sentences, and paragraphs in your text instantly.",
+      "actionType": "word-counter",
+      "introText": "This tool analyzes your text and provides accurate counts of words, characters, and sentences. It's essential for writers tracking length requirements."
+    },
+    {
+      "slug": "remove-line-breaks",
+      "title": "Remove Line Breaks",
+      "h1": "Remove Line Breaks",
+      "description": "Remove all line breaks and newlines from your text, merging it into one line.",
+      "actionType": "remove-line-breaks",
+      "introText": "This tool eliminates line breaks and paragraph spacing, joining your text into a continuous block. It's helpful when preparing text for single-line fields or formats."
+    },
+    {
+      "slug": "capitalize-first-letter",
+      "title": "Capitalize First Letter",
+      "h1": "Capitalize First Letter",
+      "description": "Capitalize only the first letter of your text or each line automatically.",
+      "actionType": "capitalize-first-letter",
+      "introText": "This tool capitalizes the first letter of your text while leaving the rest unchanged. It's a quick fix for text that starts with a lowercase letter."
+    },
+    {
+      "slug": "alternate-case",
+      "title": "Alternating Case Converter",
+      "h1": "aLtErNaTiNg cAsE",
+      "description": "Convert text into alternating uppercase and lowercase letters for a fun mocking style.",
+      "actionType": "alternate-case",
+      "introText": "This tool alternates the case of each letter in your text, creating a distinctive zigzag pattern. It's popular for sarcastic memes and playful text styling."
+    },
+    {
+      "slug": "base64-encode",
+      "title": "Base64 Encoder",
+      "h1": "Base64 Encode Text",
+      "description": "Encode plain text into Base64 format for safe data transmission and storage.",
+      "actionType": "base64-encode",
+      "introText": "This tool converts your text into Base64-encoded output, a common format for encoding binary and text data. It's useful for developers working with APIs and data URIs."
+    },
+    {
+      "slug": "remove-duplicate-lines",
+      "title": "Remove Duplicate Lines",
+      "h1": "Remove Duplicate Lines",
+      "description": "Remove repeated, identical lines from your text and keep only unique entries.",
+      "actionType": "remove-duplicate-lines",
+      "introText": "This tool scans your text line by line and eliminates any duplicates, keeping only unique lines. It's great for cleaning lists, logs, or datasets."
+    },
+    {
+      "slug": "trim-whitespace",
+      "title": "Trim Whitespace",
+      "h1": "Trim Whitespace",
+      "description": "Remove leading and trailing whitespace from every line of your text.",
+      "actionType": "trim-whitespace",
+      "introText": "This tool strips unwanted spaces, tabs, and blank characters from the start and end of your text. It helps standardize formatting before further processing."
+    },
+    {
+      "slug": "remove-numbers",
+      "title": "Remove Numbers",
+      "h1": "Remove Numbers from Text",
+      "description": "Remove all numeric digits from your text, leaving only letters and symbols.",
+      "actionType": "remove-numbers",
+      "introText": "This tool scans your text and deletes every numeric digit it finds. It's useful for cleaning data or isolating non-numeric content."
+    },
+    {
+      "slug": "remove-punctuation",
+      "title": "Remove Punctuation",
+      "h1": "Remove Punctuation",
+      "description": "Remove all punctuation marks from your text, leaving only words and spaces.",
+      "actionType": "remove-punctuation",
+      "introText": "This tool strips commas, periods, exclamation marks, and other punctuation from your text. It's helpful for text analysis, tokenization, or casual cleanup."
+    },
+    {
+      "slug": "url-encode",
+      "title": "URL Encoder",
+      "h1": "URL Encode Text",
+      "description": "Encode text into URL-safe format by converting special characters to percent-encoded sequences.",
+      "actionType": "url-encode",
+      "introText": "This tool converts your text into a URL-encoded string, replacing unsafe characters with percent-encoded equivalents. It's essential for building valid query strings and links."
+    }
+  ]

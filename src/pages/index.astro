@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro';
+import tools from '../data/tools.json';
+
+// Группируем инструменты по категориям для удобной навигации
+const caseTools = tools.filter(t => ['uppercase', 'lowercase', 'sentence-case', 'title-case', 'alternate-case', 'capitalize-first-letter'].includes(t.slug));
+const devTools = tools.filter(t => ['slugify', 'camelcase', 'snakecase', 'kebabcase', 'base64-encode', 'url-encode'].includes(t.slug));
+const cleanTools = tools.filter(t => ['remove-extra-spaces', 'reverse-text', 'word-counter', 'remove-line-breaks', 'remove-duplicate-lines', 'trim-whitespace', 'remove-numbers', 'remove-punctuation'].includes(t.slug));
+---
+
+<Layout title="Letter Lab - Free Online Text Tools & Converters" description="Free online text transformation, case converter, slug generator, and developer formatting tools. Fast, secure, and works 100% in your browser.">
+  <div class="px-4 md:px-20 flex flex-1 justify-center py-8">
+    <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+      
+      <!-- HERO SECTION -->
+      <section class="flex flex-col items-center text-center py-10 px-4 rounded-2xl bg-gradient-to-b from-[#f8fafc] to-white border border-[#f0f2f4] mb-10">
+        <span class="px-3 py-1 text-xs font-semibold tracking-wide text-[#3289e7] bg-[#eef5fc] rounded-full uppercase mb-4">
+          Fast & 100% Private
+        </span>
+        <h1 class="text-[#111418] text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight max-w-[720px] mb-4">
+          Free Online Text Transformation Tools
+        </h1>
+        <p class="text-[#637588] text-base sm:text-lg font-normal leading-relaxed max-w-[640px] mb-8">
+          Convert letter case, clean up whitespace, generate slugs, and format text instantly. All processing happens locally in your browser — your data never leaves your device.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="#tools-grid" class="flex items-center justify-center rounded-xl bg-[#3289e7] hover:bg-[#2776cc] px-6 py-3 text-white font-bold text-sm transition-colors shadow-sm">
+            Explore All Tools
+          </a>
+        </div>
+      </section>
+
+      <!-- TOOLS GRID SECTION -->
+      <div id="tools-grid" class="flex flex-col gap-10">
+        
+        <!-- Category 1: Case Converters -->
+        <section>
+          <div class="flex items-center gap-3 mb-4 border-b border-[#f0f2f4] pb-2">
+            <h2 class="text-[#111418] text-xl font-bold tracking-tight">Case Converters</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {caseTools.map((tool) => (
+              <a href={`/tools/${tool.slug}`} class="group flex flex-col justify-between p-5 rounded-xl border border-[#e4e6e8] bg-white hover:border-[#3289e7] hover:shadow-md transition-all">
+                <div>
+                  <h3 class="text-[#111418] font-bold text-base group-hover:text-[#3289e7] transition-colors mb-2">
+                    {tool.h1}
+                  </h3>
+                  <p class="text-[#637588] text-xs font-normal leading-relaxed line-clamp-2">
+                    {tool.introText}
+                  </p>
+                </div>
+                <div class="mt-4 flex items-center text-xs font-semibold text-[#3289e7]">
+                  Use Tool &rarr;
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <!-- Category 2: Developer & Naming Tools -->
+        <section>
+          <div class="flex items-center gap-3 mb-4 border-b border-[#f0f2f4] pb-2">
+            <h2 class="text-[#111418] text-xl font-bold tracking-tight">Developer & Naming Tools</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {devTools.map((tool) => (
+              <a href={`/tools/${tool.slug}`} class="group flex flex-col justify-between p-5 rounded-xl border border-[#e4e6e8] bg-white hover:border-[#3289e7] hover:shadow-md transition-all">
+                <div>
+                  <h3 class="text-[#111418] font-bold text-base group-hover:text-[#3289e7] transition-colors mb-2">
+                    {tool.h1}
+                  </h3>
+                  <p class="text-[#637588] text-xs font-normal leading-relaxed line-clamp-2">
+                    {tool.introText}
+                  </p>
+                </div>
+                <div class="mt-4 flex items-center text-xs font-semibold text-[#3289e7]">
+                  Use Tool &rarr;
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+        <!-- Category 3: Text Cleaners & Utilities -->
+        <section>
+          <div class="flex items-center gap-3 mb-4 border-b border-[#f0f2f4] pb-2">
+            <h2 class="text-[#111418] text-xl font-bold tracking-tight">Text Cleaners & Utilities</h2>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {cleanTools.map((tool) => (
+              <a href={`/tools/${tool.slug}`} class="group flex flex-col justify-between p-5 rounded-xl border border-[#e4e6e8] bg-white hover:border-[#3289e7] hover:shadow-md transition-all">
+                <div>
+                  <h3 class="text-[#111418] font-bold text-base group-hover:text-[#3289e7] transition-colors mb-2">
+                    {tool.h1}
+                  </h3>
+                  <p class="text-[#637588] text-xs font-normal leading-relaxed line-clamp-2">
+                    {tool.introText}
+                  </p>
+                </div>
+                <div class="mt-4 flex items-center text-xs font-semibold text-[#3289e7]">
+                  Use Tool &rarr;
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+
+      </div>
+
+      <!-- FEATURES / WHY US SECTION -->
+      <section class="my-16 py-10 px-6 rounded-2xl bg-[#f8fafc] border border-[#f0f2f4]">
+        <h2 class="text-[#111418] text-2xl font-bold text-center mb-8">Why Use Letter Lab?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-12 h-12 rounded-full bg-[#eef5fc] flex items-center justify-center text-[#3289e7] font-bold text-xl mb-3">⚡</div>
+            <h3 class="text-[#111418] font-bold text-lg mb-2">Instant Real-Time Results</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">No waiting for page reloads or server responses. Results update live as you type or paste your text.</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-12 h-12 rounded-full bg-[#eef5fc] flex items-center justify-center text-[#3289e7] font-bold text-xl mb-3">🔒</div>
+            <h3 class="text-[#111418] font-bold text-lg mb-2">100% Client-Side Privacy</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">Your text stays in your browser. We never store, log, or transmit your data to any external server.</p>
+          </div>
+          <div class="flex flex-col items-center text-center p-4">
+            <div class="w-12 h-12 rounded-full bg-[#eef5fc] flex items-center justify-center text-[#3289e7] font-bold text-xl mb-3">✨</div>
+            <h3 class="text-[#111418] font-bold text-lg mb-2">Completely Free & Clean</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">No registrations, no paywalls, and no intrusive popups. Just simple and reliable text utilities when you need them.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ SECTION (Good for SEO) -->
+      <section class="mb-12">
+        <h2 class="text-[#111418] text-2xl font-bold text-center mb-6">Frequently Asked Questions</h2>
+        <div class="flex flex-col gap-4 max-w-[760px] mx-auto">
+          <div class="p-5 rounded-xl border border-[#e4e6e8] bg-white">
+            <h3 class="text-[#111418] font-bold text-base mb-2">Is Letter Lab free to use?</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">Yes, all 20 text transformation tools on Letter Lab are completely free to use without limits or account creation.</p>
+          </div>
+          <div class="p-5 rounded-xl border border-[#e4e6e8] bg-white">
+            <h3 class="text-[#111418] font-bold text-base mb-2">Is my text stored on any servers?</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">No. All text manipulations are computed locally inside your browser using JavaScript. Nothing is uploaded to any backend database or server.</p>
+          </div>
+          <div class="p-5 rounded-xl border border-[#e4e6e8] bg-white">
+            <h3 class="text-[#111418] font-bold text-base mb-2">Can I use Letter Lab on mobile devices?</h3>
+            <p class="text-[#637588] text-sm leading-relaxed">Absolutely. The website is fully responsive and optimized for mobile phones, tablets, and desktop devices.</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</Layout>
